@@ -1,0 +1,17 @@
+def leer_conjunto(nombre):
+    entrada = input(f"Introduce números enteros para el conjunto {nombre} separados por espacios: ")
+    return set(map(int, entrada.split()))
+
+# Leer conjuntos
+conjunto1 = leer_conjunto("A")
+conjunto2 = leer_conjunto("B")
+
+# Operaciones
+interseccion = conjunto1 & conjunto2
+union = conjunto1 | conjunto2
+diferencia_simetrica = conjunto1 ^ conjunto2
+
+# Mostrar resultados
+print("Intersección:", interseccion)
+print("Unión:", union)
+print("Diferencia simétrica:", diferencia_simetrica)
