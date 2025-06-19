@@ -1,0 +1,14 @@
+import string
+
+def contar_palabras(texto):
+    texto = texto.lower()  # Convertir a minúsculas
+    texto = texto.translate(str.maketrans('', '', string.punctuation))  # Eliminar puntuación
+    palabras = texto.split()
+    
+    frecuencia = {}
+    for palabra in palabras:
+        frecuencia[palabra] = frecuencia.get(palabra, 0) + 1
+
+    # Mostrar ordenadas alfabéticamente
+    for palabra in sorted(frecuencia):
+        print(f"{palabra}: {frecuencia[palabra]}")
